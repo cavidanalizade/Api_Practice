@@ -1,8 +1,10 @@
+using App.BUSINESS.DTOs.Brand;
 using App.BUSINESS.Services.Implementations;
 using App.BUSINESS.Services.Interfaces;
 using App.DAL.Context;
 using App.DAL.Repositories.Implementations;
 using App.DAL.Repositories.Interfaces;
+using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +13,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<IBrandService, BrandService>();
 builder.Services.AddControllers();
+builder .Services.AddTransient<IValidator<CreateBrandDto>, CreateBrandDtoValidation>();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("myDb1")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

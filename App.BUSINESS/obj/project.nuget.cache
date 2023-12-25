@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "6rRgp99O1rDZA3GF6sZ3y+JqMAdtp5+L7afqTOWqQRfYCxPaW1F28uzkCgCxcmvn/8vyLRMVZdP1QK8Cb1ayDA==",
+  "dgSpecHash": "EV5f6uAWnZWx/v3qLUIjW6dZ4ac7EaxsO6cgtRwPO7LqTglDsR5blySum8JiVDAVWrxXncwZIf4U8gOfi4B7YQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\II novbe\\source\\repos\\App\\App.BUSINESS\\App.BUSINESS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\II novbe\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\II novbe\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",

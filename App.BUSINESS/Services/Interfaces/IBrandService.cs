@@ -15,7 +15,9 @@ namespace App.BUSINESS.Services.Interfaces
         Task<Brand> GetById(int id);
         Task Create(CreateBrandDto createBrandDto);
         Task Delete(int id);
+        Task DeleteAll();
         Task Update(UpdateBrandDto updateBrandDto);
+        Task Restore();
 
     }
 }

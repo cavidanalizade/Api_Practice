@@ -37,6 +37,12 @@ namespace App.BUSINESS.Services.Implementations
             _repo.Save();
         }
 
+        public async Task DeleteAll()
+        {
+            _repo.deleteAll();
+            _repo.Save();
+        }
+
         public async Task<ICollection<Brand>> GetAllAsync()
         {
             var categories = await _repo.GetAllAsync();
@@ -52,7 +58,14 @@ namespace App.BUSINESS.Services.Implementations
         public async Task<ICollection<Brand>> RecycleBin()
         {
             var categories = await _repo.RecycleBin();
+            _repo.Save();
             return await categories.ToListAsync();
+        }
+
+        public async Task Restore()
+        {
+             _repo.restore();
+             _repo.Save();
         }
 
         public async Task Update(UpdateBrandDto updateBrandDto)

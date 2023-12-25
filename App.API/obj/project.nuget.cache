@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "2nK4NDt5GAVuCDmkq9YGMkImZqURGL/vyYCH+upI1UF9y6pELWJXkpvmmIIuViQ6s0Eg5XeN53f86x9tWILFAA==",
+  "dgSpecHash": "iC2ND9Yq5Log34FijUiwnHr9Wb2GYZvxjVgRAMOKOBLRsvG7Wqsf0iS2V4z92eALFkbqztR1DWwRo/ZmK041fg==",
   "success": true,
   "projectFilePath": "C:\\Users\\II novbe\\source\\repos\\App\\App.API\\App.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\II novbe\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\II novbe\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\II novbe\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

@@ -1,6 +1,7 @@
 ﻿using App.BUSINESS.DTOs.Brand;
 using App.BUSINESS.Services.Interfaces;
 using App.CORE.Entities;
+using FluentValidation;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,10 +12,13 @@ namespace App.API.Controllers
     public class BrandController : ControllerBase
     {
         private readonly IBrandService _service;
+        private readonly IValidator<CreateBrandDto> _validator;
 
-        public BrandController(IBrandService service)
+
+        public BrandController(IBrandService service , IValidator<CreateBrandDto> validator)
         {
             _service = service;
+            _validator = validator;
         }
 
         [HttpGet]
@@ -32,6 +36,12 @@ namespace App.API.Controllers
         [HttpPost]
         public async Task <IActionResult> Create ([FromForm]CreateBrandDto createBrandDto)
         {
+            var validationResult = _validator.Validate(createBrandDto);
+
+            if (!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             await _service.Create(createBrandDto);
             return StatusCode(StatusCodes.Status200OK);
         }
@@ -51,11 +61,22 @@ namespace App.API.Controllers
 
         }
         [HttpGet("RecycleBin")]
-        public async Task<IActionResult> RecycleBin()
+        public async Task<IActionResult> RecycleBin(bool restore)
         {
             var brands = await _service.RecycleBin();
+            if (restore is true)
+            {
+                _service.Restore();
+            }
+
             return StatusCode(StatusCodes.Status200OK, brands);
 
+        }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteAll()
+        {
+            await _service.DeleteAll();
+            return StatusCode(StatusCodes.Status200OK);
         }
     }
 }

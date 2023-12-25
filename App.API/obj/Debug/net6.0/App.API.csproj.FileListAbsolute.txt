@@ -69,3 +69,4 @@ C:\Users\II novbe\source\repos\App\App.API\obj\Debug\net6.0\App.API.genruntimeco
 C:\Users\II novbe\source\repos\App\App.API\obj\Debug\net6.0\ref\App.API.dll
 C:\Users\II novbe\source\repos\App\App.API\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\II novbe\source\repos\App\App.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\II novbe\source\repos\App\App.API\bin\Debug\net6.0\FluentValidation.dll

@@ -36,6 +36,14 @@ namespace App.DAL.Repositories.Implementations
             }
         }
 
+        public void deleteAll()
+        {
+            foreach (var item in Table)
+            {
+                item.IsDeleted = true;
+            }
+        }
+
         public async Task<IQueryable<T>> GetAllAsync(Expression<Func<T, bool>>? expression = null, params string[] includes)
         {
             IQueryable<T> query = Table.Where(b=>!b.IsDeleted);
@@ -73,6 +81,14 @@ namespace App.DAL.Repositories.Implementations
                 query = query.Where(expression);
             }
             return query;
+        }
+
+        public void restore()
+        {
+            foreach (var item in Table)
+            {
+                item.IsDeleted = false;
+            }
         }
 
         public void Save()
